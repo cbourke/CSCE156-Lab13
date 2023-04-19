@@ -2,6 +2,11 @@ package unl.cse.sorting;
 
 import java.util.List;
 
+/**
+ * A collection of sorting algorithm implementations for Lists of
+ * {@link Location} objects.
+ *
+ */
 public class SortingAlgorithms {
 
 	/**
@@ -47,6 +52,7 @@ public class SortingAlgorithms {
 
 	/**
 	 * Recursive call for the {@link #quickSort(List)} method.
+	 * 
 	 * @param locations
 	 * @param low
 	 * @param high
