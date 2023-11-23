@@ -1,11 +1,11 @@
 # Computer Science II
 ## Lab 13.0 - Sorting
+[School of Computing](https://computing.unl.edu)  
+[College of Engineering](https://engineering.unl.edu/)  
+[University of Nebraska-Lincoln](https://unl.edu)  
+[University of Nebraska-Omaha](https://unomaha.edu)  
 
 A review of sorting algorithms and efficiency.
-
-This is a lab used in Computer Science II (CSCE 156, CSCE 156H) in the 
-[Department of Computer Science & Engineering](https://cse.unl.edu) at the 
-[University of Nebraska-Lincoln](https://unl.edu).
 
 ## Overview
 
@@ -110,12 +110,12 @@ an implementation for the following method:
 
 The general contract of this method is as follows:
 
--   It returns a negative number if `this` object should *precede*
+-   It returns a negative number (**not** necessarily -1) if `this` object should *precede*
     (come before) the `item` object
 
 -   It returns zero if `this` object is "equivalent" to the `item` object
 
--   It returns a positive number if `this` object should come after the
+-   It returns a positive number (**not** necessarily 1) if `this` object should come after the
     `item` object
 
 ## 2.2 Sorting Algorithms
@@ -142,7 +142,7 @@ can compute (roughly) the total elapsed time. As an example, consider
 the following code snippet.  An example has been provided (see 
 `SortingPerformance`) that times Java's `Collections.sort()` method and 
 reports (an estimate of) its execution time in seconds.  Adapt this
-code to perform your own emperical experiments.  Be sure to pass in a
+code to perform your own empirical experiments.  Be sure to pass in a
 *deep copy* of the list so as not to bias the performance by providing
 it a pre-sorted list.
 
@@ -158,7 +158,13 @@ it a pre-sorted list.
     textbook](https://bitbucket.org/chrisbourke/computersciencei/raw/44fb9b39be3221dc02c1b5d0712f9b9f03260e46/ComputerScienceOne.pdf).
 
 3.  Debug your code and verify that each sorting algorithm is correctly
-    sorting by using the provided JUnit test suites.
+    sorting.
+    
+    - You can use the `SortingDemo.java` file to run and debug your methods and
+      visually inspect the ordering (or run the debugger with).
+    
+    - Run the provided JUnit test suites which run multiple tests with
+      random samples.
 
 4.  Perform timed experimental runs of each of your algorithms
     on various list sizes.  Specifically, run experiments on the specified 
@@ -167,10 +173,10 @@ it a pre-sorted list.
     
     | Algorithm      | Theoretical Efficiency | 1,000 | 10,000 | 20,000 | 100,000 |
     |----------------|------------------------|-------|--------|--------|---------|
-    | Java Sort      | O(nlog(n))             |       |        |        |         |
-    | Selection Sort | O(n^2)                 |       |        |        |         |
-    | Insertion Sort | O(n^2)                 |       |        |        |         |
-    | Quick Sort     | O(nlog(n))             |       |        |        |         |                                               
+    | Java Sort      | $O(n\log{(n)})$        |       |        |        |         |
+    | Selection Sort | $O(n^2)$               |       |        |        |         |
+    | Insertion Sort | $O(n^2)$               |       |        |        |         |
+    | Quick Sort     | $O(n\log{(n)})$        |       |        |        |         |                                               
 
     - Without actually running the simulation, predict the running time of
       each algorithm for n = 1,000,000 based on the theoretical efficiency

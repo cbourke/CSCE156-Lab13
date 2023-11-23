@@ -1,4 +1,4 @@
-package unl.cse.sorting;
+package unl.soc.sorting;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +23,7 @@ public class SortingPerformance {
 		start = System.nanoTime();
 		// call the sorting method
 		SortingAlgorithms.selectionSort(copy);
-		//Collections.sort(copy);
+		// Collections.sort(copy);
 		end = System.nanoTime();
 		// report the time
 		elapsedTimeNs = (end - start);

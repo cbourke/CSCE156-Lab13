@@ -1,4 +1,4 @@
-package unl.cse.sorting;
+package unl.soc.sorting;
 
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Timeout;
@@ -9,13 +9,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SortingTests {
-	
+
 	/**
-	 * Tests {@link SortingAlgorithms#insertionSort(List)} on
-	 * a small (5) randomly selected list of {@link Location} instances.
+	 * Tests {@link SortingAlgorithms#insertionSort(List)} on a small (5) randomly
+	 * selected list of {@link Location} instances.
 	 * 
-	 * Test will time out after a maximum of 5 seconds.  If code takes longer
-	 * than 5 seconds it is likely stuck in an infinite loop.
+	 * Test will time out after a maximum of 5 seconds. If code takes longer than 5
+	 * seconds it is likely stuck in an infinite loop.
 	 * 
 	 * This test allows you to more easily troubleshoot with a smaller sample.
 	 */
@@ -27,14 +27,14 @@ public class SortingTests {
 		Collections.sort(expected);
 		SortingAlgorithms.insertionSort(actual);
 
-		assertEquals(expected, actual, "Insertion sort did not match the expected sort order for the given array");
+		assertEquals(expected, actual, "Insertion sort did not match the expected sort order for the given list");
 	}
 
 	/**
 	 * Repeatedly (10 times) tests {@link SortingAlgorithms#insertionSort(List)} on
 	 * a small (100) randomly selected list of {@link Location} instances.
 	 * 
-	 * Each test will time out after a maximum of 5 seconds.  If code takes longer
+	 * Each test will time out after a maximum of 5 seconds. If code takes longer
 	 * than 5 seconds it is likely stuck in an infinite loop.
 	 */
 	@RepeatedTest(10)
@@ -46,15 +46,15 @@ public class SortingTests {
 		Collections.sort(expected);
 		SortingAlgorithms.insertionSort(actual);
 
-		assertEquals(expected, actual, "Insertion sort did not match the expected sort order for the given array");
+		assertEquals(expected, actual, "Insertion sort did not match the expected sort order for the given list");
 	}
-	
+
 	/**
-	 * Tests {@link SortingAlgorithms#quickSort(List)} on a
-	 * small (5) randomly selected list of {@link Location} instances.
+	 * Tests {@link SortingAlgorithms#quickSort(List)} on a small (5) randomly
+	 * selected list of {@link Location} instances.
 	 * 
-	 * Test will time out after a maximum of 5 seconds.  If code takes longer
-	 * than 5 seconds it is likely stuck in an infinite loop.
+	 * Test will time out after a maximum of 5 seconds. If code takes longer than 5
+	 * seconds it is likely stuck in an infinite loop.
 	 * 
 	 * This test allows you to more easily troubleshoot with a smaller sample.
 	 */
@@ -66,14 +66,14 @@ public class SortingTests {
 		Collections.sort(expected);
 		SortingAlgorithms.quickSort(actual);
 
-		assertEquals(expected, actual, "Quick sort did not match the expected sort order for the given array");
+		assertEquals(expected, actual, "Quick sort did not match the expected sort order for the given list");
 	}
 
 	/**
 	 * Repeatedly (10 times) tests {@link SortingAlgorithms#quickSort(List)} on a
 	 * small (100) randomly selected list of {@link Location} instances.
 	 * 
-	 * Each test will time out after a maximum of 5 seconds.  If code takes longer
+	 * Each test will time out after a maximum of 5 seconds. If code takes longer
 	 * than 5 seconds it is likely stuck in an infinite loop.
 	 */
 	@RepeatedTest(10)
@@ -85,7 +85,7 @@ public class SortingTests {
 		Collections.sort(expected);
 		SortingAlgorithms.quickSort(actual);
 
-		assertEquals(expected, actual, "Quick sort did not match the expected sort order for the given array");
+		assertEquals(expected, actual, "Quick sort did not match the expected sort order for the given list");
 	}
 
 }

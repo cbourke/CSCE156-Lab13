@@ -1,4 +1,4 @@
-package unl.cse.sorting;
+package unl.soc.sorting;
 
 public class Location implements Comparable<Location> {
 
@@ -44,19 +44,14 @@ public class Location implements Comparable<Location> {
 	 * @return
 	 */
 	@Override
-	public int compareTo(Location l) {
+	public int compareTo(Location location) {
 		throw new UnsupportedOperationException("YOU MUST IMPLEMENT THIS");
 	}
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(this.getCity());
-		sb.append(" ");
-		sb.append(this.getState());
-		sb.append(", ");
-		sb.append(this.getZipCode());
-		return sb.toString();
+		return String.format("%-20s %-4s %-8s ( %.2f, %.2f)", this.city, this.state, this.zipCode, this.latitude,
+				this.longitude);
 	}
 
 	@Override

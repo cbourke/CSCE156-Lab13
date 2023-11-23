@@ -1,4 +1,4 @@
-package unl.cse.sorting;
+package unl.soc.sorting;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class LocationUtils {
 	/**
 	 * List of locations loaded from a CSV file upon this class being loaded.
 	 */
-	private static final List<Location> LOCATIONS;
+	public static final List<Location> LOCATIONS;
 
 	static {
 		LOCATIONS = loadFromFile();

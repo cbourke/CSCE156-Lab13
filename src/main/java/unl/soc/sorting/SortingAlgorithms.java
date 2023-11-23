@@ -1,4 +1,4 @@
-package unl.cse.sorting;
+package unl.soc.sorting;
 
 import java.util.List;
 
