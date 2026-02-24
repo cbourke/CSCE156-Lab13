@@ -121,10 +121,10 @@ The general contract of this method is as follows:
 ## 2.2 Sorting Algorithms
 
 You will be comparing five different sorting algorithms: 
-  * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort) - a slow, naive sorting algorithm that is quadratic ($O(n^2)$)
-  * Parallel Sort - a parallelized sorting algorithm that runs each recursive
+  * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort) - a slow, naive sorting algorithm that is quadratic ($$O(n^2)$$)
+  * Parallel Sort - a parallelized $$O(n\log{n})$$ sorting algorithm that runs each recursive
   step in parallel, utilizing multiple cores at once to speed up processing
-  * [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) - a slightly faster-in-practice than selection sort but still naive 
+  * [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) - a slightly faster-in-practice than selection sort but still naive ($$O(n^2)$$)
   sorting algorithm
   * [Quick Sort](https://en.wikipedia.org/wiki/Insertion_sort) - a recursive sorting algorithm that *partitions* elements around a *pivot* element
   and then recursively sorts each left/right partition
