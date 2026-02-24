@@ -120,15 +120,20 @@ The general contract of this method is as follows:
 
 ## 2.2 Sorting Algorithms
 
-You will be comparing four different sorting algorithms: selection sort,
-insertion sort, quick sort, and the sorting method provided by the JDK
-(Java Developer's Kit, specifically the `Collections.sort()` method, 
-usually an implementation of Tim Sort).  A selection sort algorithm 
-implementation has already been provided for you in the `SortingAlgorithms` 
-class.  You can refer to this method if you are unclear on how to
-use the `compareTo()` method to order instances. You will need to 
+You will be comparing five different sorting algorithms: 
+  * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort) - a slow, naive sorting algorithm that is quadratic ($O(n^2)$)
+  * Parallel Sort - a parallelized sorting algorithm that runs each recursive
+  step in parallel, utilizing multiple cores at once to speed up processing
+  * [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) - a slightly faster-in-practice than selection sort but still naive 
+  sorting algorithm
+  * [Quick Sort](https://en.wikipedia.org/wiki/Insertion_sort) - a recursive sorting algorithm that *partitions* elements around a *pivot* element
+  and then recursively sorts each left/right partition
+  * [Timsort](https://en.wikipedia.org/wiki/Timsort) - The built-in `Collections.sort()` method that uses an implementation of Timsort
+
+Most of the code has been provided.  However, you will need to 
 complete the implementations of the insertion sort and quick sort 
-algorithms to sort `Location` objects. 
+algorithms to sort `Location` objects. Refer to this code in the `selectionSort()` 
+method if you are unclear on how to use the `compareTo()` method to order instances. 
 
 ### 2.3 Comparing Running Times
 
@@ -166,25 +171,13 @@ it a pre-sorted list.
     - Run the provided JUnit test suites which run multiple tests with
       random samples.
 
-4.  Perform timed experimental runs of each of your algorithms
-    on various list sizes.  Specifically, run experiments on the specified 
-    list sizes below and record your findings.  For best results, run the 
-    experiment several times each and take an average running time.  
-    
-    | Algorithm      | Theoretical Efficiency | 1,000 | 10,000 | 20,000 | 100,000 |
-    |----------------|------------------------|-------|--------|--------|---------|
-    | Java Sort      | $O(n\log{(n)})$        |       |        |        |         |
-    | Selection Sort | $O(n^2)$               |       |        |        |         |
-    | Insertion Sort | $O(n^2)$               |       |        |        |         |
-    | Quick Sort     | $O(n\log{(n)})$        |       |        |        |         |                                               
+4.  We have provided a benchmark test suite in `SortingPerformance.java` which runs all the
+    sorting algorithms on random data of various sizes.  Run the test suite and
+    observe the results.                                                
 
     - Without actually running the simulation, predict the running time of
       each algorithm for n = 1,000,000 based on the theoretical efficiency
       and observed running time.
-
-    - According to your experiments, is there a clear ranking of the
-      sorting algorithms? If so, list them from best to worst. 
-
 
 ## 4. Testing, Submitting & Grading
 
@@ -196,14 +189,7 @@ errors and completely debug your programs.
 
 ## Advanced Activity (Optional) 
 
-1.  Examine the experimental data for each of the sorting algorithms on
-    the various input sizes. Under the assumption that we have 1 million
-    records, make a prediction, based on the observed running times on
-    how long each algorithm would take to execute. Find a (or generate a
-    fake) fake dataset of 1 million entries and run your experiment. Do
-    your predictions match the actual running time?
-
-2.  Implementing the `Comparable` interface means that `Location` objects 
+1.  Implementing the `Comparable` interface means that `Location` objects 
     can only be "naturally ordered" in one way. It is often more flexible 
     to instead use a `Comparator` class
     to enable a user to order objects in any order that they want while

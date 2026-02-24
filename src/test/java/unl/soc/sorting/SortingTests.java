@@ -1,6 +1,7 @@
 package unl.soc.sorting;
 
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class SortingTests {
 	 * 
 	 * This test allows you to more easily troubleshoot with a smaller sample.
 	 */
+	@Test
 	@Timeout(5)
 	public void insertionSortTest01() {
 		List<Location> locations = LocationUtils.getRandomList(5);
@@ -29,6 +31,7 @@ public class SortingTests {
 
 		assertEquals(expected, actual, "Insertion sort did not match the expected sort order for the given list");
 	}
+
 
 	/**
 	 * Repeatedly (10 times) tests {@link SortingAlgorithms#insertionSort(List)} on
@@ -48,6 +51,27 @@ public class SortingTests {
 
 		assertEquals(expected, actual, "Insertion sort did not match the expected sort order for the given list");
 	}
+	
+	/**
+	 * Tests {@link SortingAlgorithms#insertionSort(List)} on a small (5) randomly
+	 * selected list of {@link Location} instances.
+	 * 
+	 * Test will time out after a maximum of 5 seconds. If code takes longer than 5
+	 * seconds it is likely stuck in an infinite loop.
+	 * 
+	 * This test allows you to more easily troubleshoot with a smaller sample.
+	 */
+	@Test
+	@Timeout(5)
+	public void parallelMergeSortTest() {
+		List<Location> locations = LocationUtils.getRandomList(5);
+		List<Location> actual = new ArrayList<>(locations);
+		List<Location> expected = new ArrayList<>(locations);
+		Collections.sort(expected);
+		SortingAlgorithms.parallelMergeSort(actual);
+
+		assertEquals(expected, actual, "Parallel Merge Sort did not match the expected sort order for the given list");
+	}
 
 	/**
 	 * Tests {@link SortingAlgorithms#quickSort(List)} on a small (5) randomly
@@ -58,6 +82,7 @@ public class SortingTests {
 	 * 
 	 * This test allows you to more easily troubleshoot with a smaller sample.
 	 */
+	@Test
 	@Timeout(5)
 	public void quickSortTest01() {
 		List<Location> locations = LocationUtils.getRandomList(5);
